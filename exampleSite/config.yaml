@@ -2,3 +2,31 @@ baseURL: "https://fuyuki-theme.web.app"
 title: "Fuyuki Theme for Hugo"
 
 defaultContentLanguage: "en"
+
+menu:
+  main:
+    - identifier: home
+      name: "Home"
+      url: /
+      weight: 1
+    - identifier: contact
+      name: "Credit"
+      url: /credit/
+      weight: 2
+    - identifier: about
+      name: "About"
+      url: /about/
+      weight: 3
+  
+  social:
+    - identifier: github
+      name: "Github"
+      url: /github/
+      weight: 1
+
+params:
+  copyright: "©2022 Hoshikawa Shiro"
+  description: "A minimalist hugo theme and not lazy designed, i swear!"
+  header:
+    # Insert icon url (local image/gravatar)
+    # icon:

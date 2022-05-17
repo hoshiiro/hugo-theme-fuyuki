@@ -5,7 +5,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'title': ["Montserrat"],
+            'display': ["Nunito Sans"],
+            'text': ["Lato"]
+        }
+    },
   },
   plugins: [
     require("tailwind-nord")

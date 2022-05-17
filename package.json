@@ -5,7 +5,7 @@
   "main": "None",
   "scripts": {
     "testweb": "hugo serve --config exampleSite/config.yaml --themesDir .",
-    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css"
+    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --watch"
   },
   "repository": {
     "type": "git",

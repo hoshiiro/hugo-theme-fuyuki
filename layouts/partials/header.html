@@ -1,0 +1,38 @@
+<section class="w-full">
+    <section class="bg-gray-100 py-5 pl-5 flex">
+            <section class="flex space-x-5">
+                {{ with site.Params.header.icon }}
+                <section class="w-max">
+                    <img class="h-10 rounded-sm" src="{{ site.Params.header.icon }}">
+                </section>
+                {{ end }}
+                <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto space-y-1">
+                    <h2 class="font-title text-sm font-extrabold text-gray-600 tracking-wide">{{ site.Title }}</h2>
+                    {{ with site.Params.description }}<h3 class="font-display text-xs font-semibold text-gray-500 tracking-wide">{{ site.Params.description }}</h3>{{ end }}
+                </section>
+            </section>
+            {{ with site.Params.sidebar }}
+            <section class="flex justify-end flex-grow pr-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 my-auto text-gray-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+       <desc>Download more icon variants from https://tabler-icons.io/i/menu-2</desc>
+       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+       <line x1="4" y1="6" x2="20" y2="6"></line>
+       <line x1="4" y1="12" x2="20" y2="12"></line>
+       <line x1="4" y1="18" x2="20" y2="18"></line>
+    </svg>
+            </section>
+            {{ end }}
+    </section>
+    <section class="bg-gray-100 pb-3 px-5 shadow-sm grid grid-cols-2">
+        <section class="space-x-5">
+        {{ range site.Menus.main }}
+            <a class="font-display text-xs font-bold text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        </section>
+        <section class="flex my-auto space-x-5 justify-end">
+        {{ range site.Menus.social }}
+            <a class="font-display text-xs font-bold text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        </section>
+    </section>
+</section>
