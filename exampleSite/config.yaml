@@ -1,0 +1,4 @@
+baseURL: "https://fuyuki-theme.web.app"
+title: "Fuyuki Theme for Hugo"
+
+defaultContentLanguage: "en"

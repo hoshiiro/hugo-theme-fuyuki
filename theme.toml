@@ -1,0 +1,12 @@
+name = "Fuyuki"
+license = "GPL-3.0"
+licenselink = "https://github.com/hoshiiro/hugo-theme-fuyuki/blob/main/LICENSE"
+description = ""
+homepage = "https://fuyuki-theme.web.app"
+tags = []
+features = []
+min_version = "0.89.0"
+
+[author]
+  name = "Fikri Cahyo N"
+  homepage = "https://cxyrius.web.app"
