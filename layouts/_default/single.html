@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <article class="fuyu-content flex-row">
+        <span class="my-auto text-gray-500 font-display text-[11px] font-bold">
+            {{.Date.Format "Monday, jan 06. 2006." }}
+        </span>
+        <div class="font-title text-nord10 font-bold mt-2 mb-5 text-2xl">{{ .Title }}</div>
+        <img class="h-[175px] rounded-md mb-5 w-full" style="object-fit: cover;" src="{{ .Params.image | absURL }}"/>
+        {{ .Content }}
+    </article>
+{{ end }}

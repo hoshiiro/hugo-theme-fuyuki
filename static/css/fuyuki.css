@@ -468,13 +468,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.fixed {
-  position: fixed;
+.m-0 {
+  margin: 0px;
 }
 
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -489,12 +505,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.h-auto {
-  height: auto;
+.h-\[150px\] {
+  height: 150px;
 }
 
-.h-20 {
-  height: 5rem;
+.h-\[175px\] {
+  height: 175px;
 }
 
 .h-10 {
@@ -515,26 +531,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-grow: 1;
 }
 
-.grid-flow-row {
-  grid-auto-flow: row;
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .justify-end {
   justify-content: flex-end;
 }
 
-.justify-center {
-  justify-content: center;
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -543,55 +565,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.justify-self-end {
-  justify-self: end;
-}
-
-.rounded-full {
-  border-radius: 9999px;
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .rounded-md {
   border-radius: 0.375rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
 }
 
-.bg-nord4 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 222 233 / var(--tw-bg-opacity));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-nord6 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 239 244 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .bg-gray-50 {
@@ -604,31 +600,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(143 188 187 / var(--tw-bg-opacity));
 }
 
-.p-3 {
-  padding: 0.75rem;
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.p-\[20px\] {
-  padding: 20px;
+.p-2 {
+  padding: 0.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.p-7 {
+  padding: 1.75rem;
 }
 
 .py-2 {
@@ -641,13 +623,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
 }
 
 .pr-5 {
@@ -658,35 +649,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.pt-\[20px\] {
-  padding-top: 20px;
-}
-
-.pt-\[100px\] {
-  padding-top: 100px;
-}
-
-.text-right {
-  text-align: right;
+.text-justify {
+  text-align: justify;
 }
 
 .font-title {
-  font-family: Montserrat;
+  font-family: Raleway;
 }
 
 .font-display {
-  font-family: Nunito Sans;
-}
-
-.font-text {
   font-family: Lato;
 }
 
@@ -695,13 +666,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
+.text-\[11px\] {
+  font-size: 11px;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-.font-extrabold {
-  font-weight: 800;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-semibold {
@@ -716,6 +692,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 500;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -724,22 +708,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 0.025em;
 }
 
-.tracking-\[10px\] {
-  letter-spacing: 10px;
-}
-
 .tracking-widest {
   letter-spacing: 0.1em;
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -752,14 +722,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.text-nord10 {
+  --tw-text-opacity: 1;
+  color: rgb(94 129 172 / var(--tw-text-opacity));
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-nord7 {
-  --tw-text-opacity: 1;
-  color: rgb(143 188 187 / var(--tw-text-opacity));
 }
 
 .text-nord9 {
@@ -767,18 +737,620 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(129 161 193 / var(--tw-text-opacity));
 }
 
-.text-nord8 {
+.text-gray-600 {
   --tw-text-opacity: 1;
-  color: rgb(136 192 208 / var(--tw-text-opacity));
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.fuyu-content p {
+  text-align: justify;
+  font-family: Lato;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.fuyu-content p b {
+  letter-spacing: 0.1em;
+}
+
+.fuyu-content h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-family: Raleway;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(129 161 193 / var(--tw-text-opacity));
+}
+
+.fuyu-content h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.fuyu-content h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.fuyu-content h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.fuyu-content h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.fuyu-content h5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.fuyu-content h6 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.fuyu-content p {
+  margin-bottom: 1.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.625;
+}
+
+/* #### Chroma styling #### */
+
+/* Background */
+
+.bg {
+  color: #d8dee9;
+}
+
+/* PreWrapper */
+
+.chroma {
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 52 64 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+/* Other */
+
+.chroma .x {
+}
+
+/* Error */
+
+.chroma .err {
+  color: #bf616a
+}
+
+/* CodeLine */
+
+.chroma .cl {
+}
+
+/* LineTableTD */
+
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineTable */
+
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineHighlight */
+
+.chroma .hl {
+  background-color: #ffffcc
+}
+
+/* LineNumbersTable */
+
+.chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #6c6f74
+}
+
+/* LineNumbers */
+
+.chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #6c6f74
+}
+
+/* Line */
+
+.chroma .line {
+  display: flex;
+}
+
+/* Keyword */
+
+.chroma .k {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* KeywordConstant */
+
+.chroma .kc {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* KeywordDeclaration */
+
+.chroma .kd {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* KeywordNamespace */
+
+.chroma .kn {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* KeywordPseudo */
+
+.chroma .kp {
+  color: #81a1c1
+}
+
+/* KeywordReserved */
+
+.chroma .kr {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* KeywordType */
+
+.chroma .kt {
+  color: #81a1c1
+}
+
+/* Name */
+
+.chroma .n {
+}
+
+/* NameAttribute */
+
+.chroma .na {
+  color: #8fbcbb
+}
+
+/* NameBuiltin */
+
+.chroma .nb {
+  color: #81a1c1
+}
+
+/* NameBuiltinPseudo */
+
+.chroma .bp {
+}
+
+/* NameClass */
+
+.chroma .nc {
+  color: #8fbcbb
+}
+
+/* NameConstant */
+
+.chroma .no {
+  color: #8fbcbb
+}
+
+/* NameDecorator */
+
+.chroma .nd {
+  color: #d08770
+}
+
+/* NameEntity */
+
+.chroma .ni {
+  color: #d08770
+}
+
+/* NameException */
+
+.chroma .ne {
+  color: #bf616a
+}
+
+/* NameFunction */
+
+.chroma .nf {
+  color: #88c0d0
+}
+
+/* NameFunctionMagic */
+
+.chroma .fm {
+}
+
+/* NameLabel */
+
+.chroma .nl {
+  color: #8fbcbb
+}
+
+/* NameNamespace */
+
+.chroma .nn {
+  color: #8fbcbb
+}
+
+/* NameOther */
+
+.chroma .nx {
+}
+
+/* NameProperty */
+
+.chroma .py {
+}
+
+/* NameTag */
+
+.chroma .nt {
+  color: #81a1c1
+}
+
+/* NameVariable */
+
+.chroma .nv {
+}
+
+/* NameVariableClass */
+
+.chroma .vc {
+}
+
+/* NameVariableGlobal */
+
+.chroma .vg {
+}
+
+/* NameVariableInstance */
+
+.chroma .vi {
+}
+
+/* NameVariableMagic */
+
+.chroma .vm {
+}
+
+/* Literal */
+
+.chroma .l {
+}
+
+/* LiteralDate */
+
+.chroma .ld {
+}
+
+/* LiteralString */
+
+.chroma .s {
+  color: #a3be8c
+}
+
+/* LiteralStringAffix */
+
+.chroma .sa {
+  color: #a3be8c
+}
+
+/* LiteralStringBacktick */
+
+.chroma .sb {
+  color: #a3be8c
+}
+
+/* LiteralStringChar */
+
+.chroma .sc {
+  color: #a3be8c
+}
+
+/* LiteralStringDelimiter */
+
+.chroma .dl {
+  color: #a3be8c
+}
+
+/* LiteralStringDoc */
+
+.chroma .sd {
+  color: #616e87
+}
+
+/* LiteralStringDouble */
+
+.chroma .s2 {
+  color: #a3be8c
+}
+
+/* LiteralStringEscape */
+
+.chroma .se {
+  color: #ebcb8b
+}
+
+/* LiteralStringHeredoc */
+
+.chroma .sh {
+  color: #a3be8c
+}
+
+/* LiteralStringInterpol */
+
+.chroma .si {
+  color: #a3be8c
+}
+
+/* LiteralStringOther */
+
+.chroma .sx {
+  color: #a3be8c
+}
+
+/* LiteralStringRegex */
+
+.chroma .sr {
+  color: #ebcb8b
+}
+
+/* LiteralStringSingle */
+
+.chroma .s1 {
+  color: #a3be8c
+}
+
+/* LiteralStringSymbol */
+
+.chroma .ss {
+  color: #a3be8c
+}
+
+/* LiteralNumber */
+
+.chroma .m {
+  color: #b48ead
+}
+
+/* LiteralNumberBin */
+
+.chroma .mb {
+  color: #b48ead
+}
+
+/* LiteralNumberFloat */
+
+.chroma .mf {
+  color: #b48ead
+}
+
+/* LiteralNumberHex */
+
+.chroma .mh {
+  color: #b48ead
+}
+
+/* LiteralNumberInteger */
+
+.chroma .mi {
+  color: #b48ead
+}
+
+/* LiteralNumberIntegerLong */
+
+.chroma .il {
+  color: #b48ead
+}
+
+/* LiteralNumberOct */
+
+.chroma .mo {
+  color: #b48ead
+}
+
+/* Operator */
+
+.chroma .o {
+  color: #81a1c1
+}
+
+/* OperatorWord */
+
+.chroma .ow {
+  color: #81a1c1;
+  font-weight: bold
+}
+
+/* Punctuation */
+
+.chroma .p {
+  color: #eceff4
+}
+
+/* Comment */
+
+.chroma .c {
+  color: #616e87;
+  font-style: italic
+}
+
+/* CommentHashbang */
+
+.chroma .ch {
+  color: #616e87;
+  font-style: italic
+}
+
+/* CommentMultiline */
+
+.chroma .cm {
+  color: #616e87;
+  font-style: italic
+}
+
+/* CommentSingle */
+
+.chroma .c1 {
+  color: #616e87;
+  font-style: italic
+}
+
+/* CommentSpecial */
+
+.chroma .cs {
+  color: #616e87;
+  font-style: italic
+}
+
+/* CommentPreproc */
+
+.chroma .cp {
+  color: #5e81ac;
+  font-style: italic
+}
+
+/* CommentPreprocFile */
+
+.chroma .cpf {
+  color: #5e81ac;
+  font-style: italic
+}
+
+/* Generic */
+
+.chroma .g {
+}
+
+/* GenericDeleted */
+
+.chroma .gd {
+  color: #bf616a
+}
+
+/* GenericEmph */
+
+.chroma .ge {
+  font-style: italic
+}
+
+/* GenericError */
+
+.chroma .gr {
+  color: #bf616a
+}
+
+/* GenericHeading */
+
+.chroma .gh {
+  color: #88c0d0;
+  font-weight: bold
+}
+
+/* GenericInserted */
+
+.chroma .gi {
+  color: #a3be8c
+}
+
+/* GenericOutput */
+
+.chroma .go {
+}
+
+/* GenericPrompt */
+
+.chroma .gp {
+  color: #4c566a;
+  font-weight: bold
+}
+
+/* GenericStrong */
+
+.chroma .gs {
+  font-weight: bold
+}
+
+/* GenericSubheading */
+
+.chroma .gu {
+  color: #88c0d0;
+  font-weight: bold
+}
+
+/* GenericTraceback */
+
+.chroma .gt {
+  color: #bf616a
+}
+
+/* GenericUnderline */
+
+.chroma .gl {
+}
+
+/* TextWhitespace */
+
+.chroma .w {
 }
 
 .dark .dark\:bg-nord0 {
   --tw-bg-opacity: 1;
   background-color: rgb(46 52 64 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

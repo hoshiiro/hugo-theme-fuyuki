@@ -1,7 +1,29 @@
 baseURL: "https://fuyuki-theme.web.app"
-title: "Fuyuki Theme for Hugo"
+title: "Fuyuki【冬木】"
 
-defaultContentLanguage: "en"
+# !!! SPECIAL ONLY FOR THIS SITE !!!
+contentDir: "exampleSite/content/" 
+
+hasCJKLanguage: true
+
+taxonomies:
+   tags: "tags"
+   categories: "categories"
+
+markup:
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: "|"
+    lineAnchors: "|"
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: true
+    style: nord
+    tabWidth: 4
 
 menu:
   main:
@@ -9,14 +31,10 @@ menu:
       name: "Home"
       url: /
       weight: 1
-    - identifier: contact
-      name: "Credit"
-      url: /credit/
-      weight: 2
     - identifier: about
       name: "About"
       url: /about/
-      weight: 3
+      weight: 2
   
   social:
     - identifier: github
@@ -29,4 +47,4 @@ params:
   description: "A minimalist hugo theme and not lazy designed, i swear!"
   header:
     # Insert icon url (local image/gravatar)
-    # icon:
+    icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128

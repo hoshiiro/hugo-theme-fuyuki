@@ -1,3 +1,50 @@
 {{ define "main" }}
-
+    <section class="grid grid-rows-1 m-0 md:grid-cols-3 lg:grid-cols-3">
+        <section class="grid grid-rows-1 m-0 space-y-3">
+            <section class="flex space-x-3 mb-2">
+                <section class="p-2 rounded-md bg-gray-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pinned text-gray-500" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <desc>Download more icon variants from https://tabler-icons.io/i/pinned</desc>
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 4v6l-2 4v2h10v-2l-2 -4v-6"></path>
+   <line x1="12" y1="16" x2="12" y2="21"></line>
+   <line x1="8" y1="4" x2="16" y2="4"></line>
+</svg>
+                </section>
+                <p class="font-title text-sm font-semibold text-gray-500 my-auto">Pinned posts</p>
+            </section>
+            {{ range site.RegularPages }}
+                {{ if .Params.pinned }}
+                  <img class="h-[150px] w-full rounded-md" style="object-fit: cover;" src="{{ .Params.image }}"/>
+                  <section class="space-y-1">
+                      <h2 class="font-bold text-md font-title text-gray-500">{{ .Title }}</h2>
+                      <section class="space-x-5 pb-2">
+                          <section class="flex space-x-1">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time text-gray-500 -pl-1" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <desc>Download more icon variants from https://tabler-icons.io/i/calendar-time</desc>
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+   <circle cx="18" cy="18" r="4"></circle>
+   <path d="M15 3v4"></path>
+   <path d="M7 3v4"></path>
+   <path d="M3 11h16"></path>
+   <path d="M18 16.496v1.504l1 1"></path>
+</svg><p class="my-auto text-gray-500 font-display text-[11px] font-bold">
+{{ .Date.Format "Monday, jan 06. 2006." }}
+</p>
+                          </section>
+                      </section>
+                      <section class="flex-row">
+                      <p class="font-medium font-text font-display text-xs text-gray-500 tracking-wide text-justify">{{ .Summary }}...</p>
+                      {{ if .Truncated }}
+                        <p class="mt-5">
+                            <a class="font-display text-xs bg-nord7 py-2 px-3 text-gray-100 rounded-md" href="{{ .RelPermalink }}">Read More</a>
+                        </p>
+                      {{ end }}
+                      </section>
+                  </section>
+                {{ end }}
+            {{ end }}
+        </section>
+    </section>
 {{ end }}

@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
         fontFamily: {
-            'title': ["Montserrat"],
-            'display': ["Nunito Sans"],
-            'text': ["Lato"]
+            'title': ["Raleway"],
+            'display': ["Lato"]
         }
     },
   },
   plugins: [
-    require("tailwind-nord")
+    require("tailwind-nord"),
+    require("@tailwindcss/typography")
   ],
 }

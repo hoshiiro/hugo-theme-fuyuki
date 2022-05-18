@@ -1,14 +1,14 @@
-<section class="w-full">
-    <section class="bg-gray-100 py-5 pl-5 flex">
+<section class="w-full bg-gray-50 px-7 rounded-b-lg">
+    <section class="py-5 flex">
             <section class="flex space-x-5">
                 {{ with site.Params.header.icon }}
                 <section class="w-max">
                     <img class="h-10 rounded-sm" src="{{ site.Params.header.icon }}">
                 </section>
                 {{ end }}
-                <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto space-y-1">
-                    <h2 class="font-title text-sm font-extrabold text-gray-600 tracking-wide">{{ site.Title }}</h2>
-                    {{ with site.Params.description }}<h3 class="font-display text-xs font-semibold text-gray-500 tracking-wide">{{ site.Params.description }}</h3>{{ end }}
+                <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto">
+                    <div class="font-title text-sm font-extrabold text-gray-600 tracking-wide">{{ site.Title }}</div>
+                    {{ with site.Params.description }}<div class="font-display text-xs font-normal text-gray-500 tracking-wide">{{ site.Params.description }}</div>{{ end }}
                 </section>
             </section>
             {{ with site.Params.sidebar }}
@@ -23,15 +23,15 @@
             </section>
             {{ end }}
     </section>
-    <section class="bg-gray-100 pb-3 px-5 shadow-sm grid grid-cols-2">
+    <section class="pb-3 grid grid-cols-2">
         <section class="space-x-5">
         {{ range site.Menus.main }}
-            <a class="font-display text-xs font-bold text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-xs font-medium text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
         <section class="flex my-auto space-x-5 justify-end">
         {{ range site.Menus.social }}
-            <a class="font-display text-xs font-bold text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-xs font-medium text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
     </section>
