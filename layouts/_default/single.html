@@ -3,8 +3,24 @@
         <span class="my-auto text-gray-500 font-display text-[11px] font-bold">
             {{.Date.Format "Monday, jan 06. 2006." }}
         </span>
-        <div class="font-title text-nord10 font-bold mt-2 mb-5 text-2xl">{{ .Title }}</div>
-        <img class="h-[175px] rounded-md mb-5 w-full" style="object-fit: cover;" src="{{ .Params.image | absURL }}"/>
+        <div class="font-title text-nord7 font-bold mt-2 mb-5 text-2xl">{{ .Title }}</div>
+        {{ with .Params.image }}
+        <img class="h-[175px] rounded-t-lg w-full" style="object-fit: cover;" src="{{ .url | absURL }}"/>
+        <section class="bg-gray-50 py-2 px-3 text-sm rounded-b-lg flex">
+            <section class="text-gray-500">
+                {{ .Caption | safeHTML  }}
+            </section>
+            <section class="ml-auto my-auto">
+            <a target="_blank" title="Image source" href="{{ .source }}"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link text-nord7" width="15" height="15" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <desc>Download more icon variants from https://tabler-icons.io/i/external-link</desc>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+                <line x1="10" y1="14" x2="20" y2="4"></line>
+                <polyline points="15 4 20 4 20 9"></polyline>
+            </svg></a>
+            </section>
+        </section>
+        {{ end }}
         {{ .Content }}
     </article>
 {{ end }}

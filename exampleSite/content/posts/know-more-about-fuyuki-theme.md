@@ -1,7 +1,10 @@
 ---
 title: "Know More About Fuyuki Theme"
 date: 2022-05-17T14:09:11Z
-image: img/warspite.jpg
+image: 
+  url: img/warspite.jpg
+  caption: "Warspite"
+  source: "/github/"
 draft: false
 pinned: true
 ---
@@ -11,12 +14,23 @@ For why i use Nord, of course its cuz their white color, in this case they calle
 
 <!-- more -->
 
+> “I don’t mind if I only had one person. Even if the whole world hated me, I could keep living if that person needed me.” \
+> – Sakuta Azusagawa
+
+Text between header and quote
+
+### Taxonomies
+
+Categories is like memories, memories of the universe(series) and tags is a fragment of memories.
+
 # Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
 ###### Header 6
+
+Things between header.
 
 ### Code highlight
 Chromastyles with nord theme.
@@ -27,10 +41,11 @@ class me:
   def go_say(message):
     print(text)
 
+# best waif
 cunny = "Perseus"
 
 if cunny == "Perseus":
-  me.go_say("UWOOOOGGGHHH")
+  me.go_say("UWOOOOGGGHHH") # always happen
 else:
-  me.go_say("hmm")
+  me.go_say("hmm") # another cunnies? SUS
 ```

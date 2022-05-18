@@ -7,10 +7,17 @@ contentDir: "exampleSite/content/"
 hasCJKLanguage: true
 
 taxonomies:
-   tags: "tags"
-   categories: "categories"
+   tags: "fragments"
+   categories: "memories"
+   series: "universes"
+
+slug: 
 
 markup:
+  tableOfContents:
+    startLevel: 1
+    ordered: true
+    endLevel: 6
   highlight:
     anchorLineNos: true
     codeFences: true
@@ -31,18 +38,25 @@ menu:
       name: "Home"
       url: /
       weight: 1
+    
+    - identifier: series
+      name: "Universe"
+      url: /universes/
+      weight: 2
+    
     - identifier: about
       name: "About"
       url: /about/
-      weight: 2
+      weight: 3
   
   social:
-    - identifier: github
-      name: "Github"
-      url: /github/
+    - identifier: twitter
+      name: "Twitter"
+      url: /twitter/
       weight: 1
 
 params:
+  sidebar: true
   copyright: "©2022 Hoshikawa Shiro"
   description: "A minimalist hugo theme and not lazy designed, i swear!"
   header:

@@ -11,7 +11,7 @@
 }
 
 .fuyu-content h1, h2, h3, h4, h5, h6 {
-    @apply font-title font-bold my-3 text-nord9 tracking-wide;
+    @apply font-title font-bold text-nord9 tracking-wide;
 }
 
 .fuyu-content h1 {
@@ -39,14 +39,18 @@
 }
 
 .fuyu-content p {
-    @apply mb-5 mt-3 leading-relaxed text-sm;
+    @apply my-5 leading-relaxed text-sm;
+}
+
+blockquote {
+    @apply text-gray-500 text-sm border-l-2 border-nord8 px-5 italic;
 }
 
 /* #### Chroma styling #### */
 
 /* Background */ .bg { color: #d8dee9; }
 /* PreWrapper */ .chroma { 
-    @apply text-gray-50 bg-nord0 p-3 rounded-md text-xs;
+    @apply text-gray-50 bg-nord0 p-3 rounded-md text-xs font-mono;
 }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #bf616a }
