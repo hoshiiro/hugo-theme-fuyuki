@@ -6,6 +6,9 @@ image:
   caption: "Warspite"
   source: "/github/"
 draft: false
+tags: ["bruh", "breh"]
+categories: 
+- "fuyuki development log"
 pinned: true
 ---
 

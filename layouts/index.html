@@ -63,6 +63,7 @@
                 <p class="font-title text-base font-semibold text-gray-500 dark:text-gray-100 my-auto">Latest posts</p>
             </section>
             {{ range last 5 site.RegularPages }}
+                {{ if (eq .Type "posts") }}
                 <section class="flex space-x-5">
                     <img class="h-full w-[120px] rounded-md" style="object-position: left center; object-fit: cover;" src="{{ .Params.image.url }}"/>
                     <section class="flex-row space-y-2">
@@ -94,6 +95,7 @@
                         </section>
                     </section>
                 </section>
+                {{ end }}
             {{ end }}
         </section>
         <!--hr class="md:hidden dark:border-nord2 my-5"-->

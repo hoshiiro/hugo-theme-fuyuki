@@ -7,9 +7,9 @@ contentDir: "exampleSite/content/"
 hasCJKLanguage: true
 
 taxonomies:
-   tags: "fragments"
-   categories: "memories"
-   series: "universes"
+  categories: "categories"
+  tags: "tags"
+  series: "series"
 
 markup:
   tableOfContents:
@@ -38,8 +38,8 @@ menu:
       weight: 1
     
     - identifier: series
-      name: "Universe"
-      url: /universes/
+      name: "Series"
+      url: /series/
       weight: 2
     
     - identifier: about
@@ -54,7 +54,7 @@ menu:
       weight: 1
 
 params:
-  useDarkModeToggler: true
+  useDarkModeToggler: yes
   copyright: "©2022 Hoshikawa Shiro"
   description: "A minimalist hugo theme and not lazy designed, i swear!"
   header:
