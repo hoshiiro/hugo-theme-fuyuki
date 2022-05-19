@@ -1,13 +1,13 @@
 {{ define "main" }}
-    <article class="fuyu-content flex-row">
-        <span class="my-auto text-gray-500 font-display text-[11px] font-bold">
+    <article class="fuyu-content flex-row my-3">
+        <span class="my-auto text-gray-500 dark:text-gray-50 font-display text-[11px] font-bold">
             {{.Date.Format "Monday, jan 06. 2006." }}
         </span>
         <div class="font-title text-nord7 font-bold mt-2 mb-5 text-2xl">{{ .Title }}</div>
         {{ with .Params.image }}
         <img class="h-[175px] rounded-t-lg w-full" style="object-fit: cover;" src="{{ .url | absURL }}"/>
-        <section class="bg-gray-50 py-2 px-3 text-sm rounded-b-lg flex">
-            <section class="text-gray-500">
+        <section class="bg-gray-50 dark:bg-nord1 py-2 px-3 text-sm rounded-b-lg flex">
+            <section class="text-gray-500 dark:text-gray-100">
                 {{ .Caption | safeHTML  }}
             </section>
             <section class="ml-auto my-auto">

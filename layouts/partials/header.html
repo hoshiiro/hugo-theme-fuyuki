@@ -1,13 +1,13 @@
-<section class="w-full bg-gray-50 px-7 rounded-b-lg">
-    <section class="py-5 grid grid-cols-2">
+<section class="w-full bg-gray-50 dark:bg-nord1 px-7 rounded-b-lg">
+    <section class="py-5 grid grid-cols-2 text-gray-500 dark:text-gray-100">
         <section class="space-x-5">
         {{ range site.Menus.main }}
-            <a class="font-display text-xs font-medium text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
         <section class="flex my-auto space-x-5 justify-end">
         {{ range site.Menus.social }}
-            <a class="font-display text-xs font-medium text-gray-500 uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
     </section>
@@ -16,25 +16,57 @@
                 <a class="flex space-x-5" href="{{ site.BaseURL }}">
                 {{ with site.Params.header.icon }}
                 <section class="w-max">
-                    <img class="h-10 rounded-sm" src="{{ site.Params.header.icon }}">
+                    <img class="h-10 rounded-md" src="{{ site.Params.header.icon }}">
                 </section>
                 {{ end }}
                 <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto">
-                    <div class="font-title text-sm font-extrabold text-gray-600 tracking-wide">{{ site.Title }}</div>
-                    {{ with site.Params.description }}<div class="font-display text-xs font-normal text-gray-500 tracking-wide">{{ site.Params.description }}</div>{{ end }}
+                    <div class="font-title text-sm font-extrabold text-gray-600 dark:text-gray-50 tracking-wide">{{ site.Title }}</div>
+                    {{ with site.Params.description }}<div class="font-display text-xs font-normal text-gray-500 dark:text-gray-100 tracking-wide">{{ site.Params.description }}</div>{{ end }}
                 </section>
                 </a>
             </section>
-            {{ with site.Params.sidebar }}
-            <section class="flex justify-end flex-grow">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 my-auto text-gray-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-       <desc>Download more icon variants from https://tabler-icons.io/i/menu-2</desc>
-       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-       <line x1="4" y1="6" x2="20" y2="6"></line>
-       <line x1="4" y1="12" x2="20" y2="12"></line>
-       <line x1="4" y1="18" x2="20" y2="18"></line>
-    </svg>
-            </section>
+            {{ with site.Params.useDarkModeToggler }}
+                <section class="flex ml-auto bg-nord7 dark:bg-nord2 my-auto p-2 rounded-md">
+	                <button onclick="themeToggle()" class="flex text-gray-100 dark:text-nord7">
+			<svg
+				id="icon-sun"
+				xmlns="http://www.w3.org/2000/svg"
+				class="icon icon-tabler icon-tabler-sun my-auto hidden"
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+				<circle cx="12" cy="12" r="4"></circle>
+				<path
+					d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"
+				></path>
+			</svg>
+			<svg
+				id="icon-moon"
+				xmlns="http://www.w3.org/2000/svg"
+				class="icon icon-tabler icon-tabler-moon my-auto hidden"
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+				<path
+					d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+				></path>
+			</svg>
+		</button>
+	</section>
             {{ end }}
     </section>
 </section>

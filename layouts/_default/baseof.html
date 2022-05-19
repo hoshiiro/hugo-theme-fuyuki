@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="">
     {{- partial "head.html" . -}}
-    <body class="bg-gray-100 dark:bg-nord0">
-        {{- partial "sidebar.html" . -}}
+    <body onload="loadTheme()" class="bg-gray-100 dark:bg-nord0">
         {{- partial "header.html" . -}}
         <section class="p-7">
             {{- block "main" . }}{{- end }}
