@@ -4,8 +4,9 @@
   "description": "",
   "main": "None",
   "scripts": {
-    "testweb": "hugo serve -D --disableFastRender --config exampleSite/config.yaml --themesDir .",
-    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --watch"
+    "testweb": "hugo serve -D --config exampleSite/config.yaml --themesDir . --watch",
+    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --watch",
+    "buildlocal": "rm -rf public && hugo -D --minify --config exampleSite/config.yaml --themesDir ."
   },
   "repository": {
     "type": "git",

@@ -8,7 +8,7 @@ image:
 draft: false
 tags: ["bruh", "breh"]
 categories: 
-- "fuyuki development log"
+  - "Fuyuki Development Log"
 pinned: true
 ---
 
@@ -39,8 +39,6 @@ Things between header.
 Chromastyles with nord theme.
 ```python
 class me:
-  def __init__(self, cunny):
-    cunny = self.cunny
   def go_say(message):
     print(text)
 

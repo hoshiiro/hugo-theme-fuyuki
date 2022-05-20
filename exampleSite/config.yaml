@@ -1,15 +1,10 @@
-baseURL: "https://fuyuki-theme.web.app"
+baseURL: "https://ichigo-miruku.web.app"
 title: "Fuyuki【冬木】"
 
 # !!! SPECIAL ONLY FOR THIS SITE !!!
 contentDir: "exampleSite/content/" 
 
 hasCJKLanguage: true
-
-taxonomies:
-  categories: "categories"
-  tags: "tags"
-  series: "series"
 
 markup:
   tableOfContents:
@@ -37,9 +32,9 @@ menu:
       url: /
       weight: 1
     
-    - identifier: series
-      name: "Series"
-      url: /series/
+    - identifier: categories
+      name: "Categories"
+      url: /categories/
       weight: 2
     
     - identifier: about
