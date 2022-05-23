@@ -2,11 +2,11 @@
 title: "Know More About Fuyuki Theme"
 date: 2022-05-17T14:09:11Z
 image: 
-  url: img/warspite.jpg
+  url: "https://cdn.jsdelivr.net/npm/canaiira-assets/img/warspite.webp"
   caption: "Warspite"
   source: "/github/"
 draft: false
-tags: ["bruh", "breh"]
+tags: ["Dev", "Hugo"]
 categories: 
   - "Fuyuki Development Log"
 pinned: true

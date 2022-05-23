@@ -14,14 +14,14 @@
     <section class="pb-5 flex">
             <section>
                 <a class="flex space-x-5" href="{{ site.BaseURL }}">
-                {{ with site.Params.header.icon }}
+                {{ with site.Params.brand.icon }}
                 <section class="w-max">
-                    <img class="h-10 rounded-md" src="{{ site.Params.header.icon }}">
+                    <img class="h-10 rounded-md" src="{{ site.Params.brand.icon }}">
                 </section>
                 {{ end }}
                 <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto">
                     <div class="font-title text-sm font-extrabold text-gray-600 dark:text-gray-50 tracking-wide">{{ site.Title }}</div>
-                    {{ with site.Params.description }}<div class="font-display text-xs font-normal text-gray-500 dark:text-gray-100 tracking-wide">{{ site.Params.description }}</div>{{ end }}
+                    {{ with site.Params.brand.description }}<div class="font-display text-xs font-normal text-gray-500 dark:text-gray-100 tracking-wide">{{ site.Params.brand.description }}</div>{{ end }}
                 </section>
                 </a>
             </section>
