@@ -11,7 +11,7 @@
 }
 
 .fuyu-content h1, h2, h3, h4, h5, h6 {
-    @apply font-title font-bold text-nord9 dark:text-nord7 tracking-wide;
+    @apply font-title font-bold text-nord3 dark:text-nord7 tracking-wide my-5;
 }
 
 .fuyu-content h1 {

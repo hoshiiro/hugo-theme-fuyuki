@@ -51,10 +51,13 @@ menu:
 params:
   useDarkModeToggler: yes
   
+  author:
+    name: "Hoshikawa Shiro"
+    icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
+    biot: "yoov"
+  
   brand:
     # Insert icon url (local image/gravatar)
-    icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
+    #icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
     # Site description
     description: "A minimalist hugo theme and not lazy designed, i swear!"
-    # Copyright text
-    copyright: "©2022 Hoshikawa Shiro"

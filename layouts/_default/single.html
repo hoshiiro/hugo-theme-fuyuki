@@ -1,12 +1,25 @@
 {{ define "main" }}
-    <article class="fuyu-content flex-row my-3">
-        <span class="my-auto text-gray-500 dark:text-gray-50 font-display text-[11px] font-bold">
-            {{.Date.Format "Monday, jan 06. 2006." }}
-        </span>
-        <div class="font-title text-nord7 font-bold mt-2 mb-5 text-2xl">{{ .Title }}</div>
+    <article class="fuyu-content flex-row">
+        <section class="flex">
+            <section class="text-gray-500 mt-2 mr-auto dark:text-gray-50 font-display text-[11px] font-bold">
+                {{.Date.Format "Monday, jan 06. 2006." }}
+            </section>
+            <section class="space-x-2">
+            {{ range .Params.tags }}
+                <a href="/tags/{{. | lower}}" class="bg-nord7 dark:bg-nord3 text-gray-100 rounded-md text-[10px] my-auto px-3 py-1 font-title font-bold">{{.}}</a>
+            {{end}}
+            </section>
+        </section>
+        <section class="my-5 space-y-3">
+            <div class="font-title text-gray-500 dark:text-nord7 font-bold text-2xl">{{ .Title }}</div>
+            <section class="flex space-x-2">
+                <img class="rounded-full" height="25px" width="25px" src="{{ site.Params.author.icon }}"/>
+                <div class="font-display text-gray-600 dark:text-gray-100 font-medium text-xs my-auto">Written by <span class="font-bold text-nord7">{{ site.Params.author.name }}</span></div>
+            </section>
+        </section>
         {{ with .Params.image }}
         <img class="h-[175px] rounded-t-lg w-full" style="object-fit: cover;" src="{{ .url | absURL }}"/>
-        <section class="bg-gray-50 dark:bg-nord1 py-2 px-3 text-sm rounded-b-lg flex">
+        <section class="bg-gray-50 dark:bg-nord1 text-sm rounded-b-lg flex py-2 px-4">
             <section class="text-gray-500 dark:text-gray-100">
                 {{ .Caption | safeHTML  }}
             </section>

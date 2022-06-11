@@ -14,18 +14,19 @@
                 <p class="font-title text-base font-semibold text-gray-500 dark:text-gray-50 my-auto">Pinned posts</p>
             </section>
             {{ range site.RegularPages }}
-                {{ if .Params.pinned }}
-                    <img class="h-[150px] w-full rounded-md" style="object-fit: cover;" src="{{ .Params.image.url }}"/>
-                    <section class="flex my-3 space-x-2">
-                        {{ range .Params.tags }}
-                            <a href="/tags/{{. | lower}}" class="bg-nord3 text-gray-100 rounded-md text-[10px] py-1 px-3 font-title font-bold">#{{.}}</a>
-                        {{end}}
-                    </section>
-                    <section class="space-y-1">
-                        <h2 class="font-bold text-md font-title text-gray-500 dark:text-gray-50">{{ .Title }}</h2>
-                        <section class="space-x-5 pb-2">
-                            <section class="flex space-x-1 text-gray-500 dark:text-nord7">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time -pl-1" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            {{ if .Params.pinned }}
+            <section class="grid grid-rows-flow">
+                <a href="{{.Permalink}}"><img class="h-[150px] w-full rounded-md" style="object-fit: cover;" src="{{ .Params.image.url }}"/></a>
+                <section class="flex mt-5 space-x-2">
+                    {{ range .Params.tags }}
+                        <a href="/tags/{{. | lower}}" class="bg-nord7 dark:bg-nord3 text-gray-100 rounded-md text-[10px] py-1 px-3 font-title font-bold">#{{.}}</a>
+                    {{end}}
+                </section>
+                <a href="{{ .Permalink }}" class="font-bold mt-3 mb-2 text-md font-title text-gray-500 dark:text-gray-50">{{ .Title }}</a>
+                <a href="{{.Permalink}}" class="space-y-1">
+                    <section class="space-x-5 pb-2">
+                        <section class="flex space-x-1 text-gray-500 dark:text-nord7">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time -pl-1" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <desc>Download more icon variants from https://tabler-icons.io/i/calendar-time</desc>
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
@@ -34,25 +35,26 @@
                                     <path d="M7 3v4"></path>
                                     <path d="M3 11h16"></path>
                                     <path d="M18 16.496v1.504l1 1"></path>
-                                </svg>
-                                <p class="my-auto font-display text-[11px] font-bold">
-				{{ .Date.Format "Monday, jan 06. 2006." }}
-                                </p>
-                           </section>
-                        </section>
-                        <section class="flex-row">
-                            <p class="font-medium font-text font-display text-xs text-gray-500 dark:text-gray-100 tracking-wide text-justify">{{ .Summary }}...</p>
-                            {{ if .Truncated }}
-                                <p class="mt-5">
-                                    <a class="font-display text-xs bg-nord7 dark:bg-nord1 py-2 px-3 text-gray-100 rounded-md" href="{{ .RelPermalink }}">Read More</a>
-                                </p>
-                            {{ end }}
+                            </svg>
+                            <p class="my-auto font-display text-[11px] font-bold">
+                                {{ .Date.Format "Monday, jan 06. 2006." }}
+                            </p>
                         </section>
                     </section>
+                    <section class="flex-row">
+                        <p class="font-medium font-text font-display text-sm text-gray-500 dark:text-gray-100 tracking-wide text-justify">{{ .Summary }}...</p>
+                                <!--p class="mt-5">
+                            {{ if .Truncated }}
+                                    <a class="font-display text-xs bg-nord7 dark:bg-nord1 py-2 px-3 text-gray-100 rounded-md" href="{{ .RelPermalink }}">Read More</a>
+                            {{ end }}
+                                </p-->
+                    </section>
+                </a>
+            </section>
                 {{ end }}
             {{ end }}
         </section>
-        <hr class="md:hidden my-5 dark:border-nord2">
+        <hr class="md:hidden my-[30px] dark:border-nord2">
         <section class="flex grid grid-rows-1 space-y-3 h-min">
             <section class="flex space-x-3 mb-2">
                 <section class="p-2 rounded-md bg-gray-50 dark:bg-nord2">
@@ -93,21 +95,21 @@
                         <section class="flex-row space-y-3">
                         <section class="flex my-2 space-x-2">
                             {{ range .Params.tags }}
-                                <a href="/tags/{{. | lower}}" class="bg-nord3 text-gray-100 rounded-md text-[10px] py-1 px-3 font-title font-bold">#{{.}}</a>
+                                <a href="/tags/{{. | lower}}" class="bg-nord7 dark:bg-nord3 text-gray-100 rounded-md text-[10px] py-1 px-3 font-title font-bold">#{{.}}</a>
                             {{end}}
                         </section>
-                            <p class="font-medium font-text font-display text-xs text-gray-500 dark:text-nord5 tracking-wide text-justify">{{ .Summary }}...</p>
+                            <!--p class="font-medium font-text font-display text-xs text-gray-500 dark:text-nord5 tracking-wide text-justify">{{ .Summary }}...</p-->
+                            <!--p>
                             {{ if .Truncated }}
-                            <p>
                                 <a class="font-display text-[11px] bg-nord7 dark:bg-nord1 py-1 px-3 text-gray-100 rounded-md" href="{{ .RelPermalink }}">Continue reading ...</a>
-                            </p>
                             {{ end }}
+                            </p-->
                         </section>
                     </section>
                 </section>
                 {{ end }}
             {{ end }}
         </section>
-        <!--hr class="md:hidden dark:border-nord2 my-5"-->
+        <!--hr class="md:hidden my-[30px] dark:border-nord2"-->
     </section>
 {{ end }}

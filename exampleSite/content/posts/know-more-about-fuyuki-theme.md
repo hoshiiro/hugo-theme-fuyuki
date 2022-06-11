@@ -7,8 +7,7 @@ image:
   source: "/github/"
 draft: false
 tags: ["Dev", "Hugo"]
-categories: 
-  - "Fuyuki Development Log"
+categories: "Fuyuki Development Log"
 pinned: true
 ---
 
