@@ -13,8 +13,7 @@ pinned: true
 
 Fuyuki, Fuyu(冬) means Winter and Ki(木) means Ki. So【冬木】literally means Fuyuki.
 For why i use Nord, of course its cuz their white color, in this case they called it **Arctic White** and it looks so good in my eyes wtf, i can feel the coolness of "arctic" in the color.
-
-<!-- more -->
+<!--more-->
 
 > “I don’t mind if I only had one person. Even if the whole world hated me, I could keep living if that person needed me.” \
 > – Sakuta Azusagawa

@@ -18,10 +18,10 @@ markup:
     hl_Lines: "|"
     lineAnchors: "|"
     lineNoStart: 1
-    lineNos: true
-    lineNumbersInTable: true
+    lineNos: false
+    lineNumbersInTable: false
     noClasses: false
-    noHl: true
+    noHl: false
     style: nord
     tabWidth: 4
 

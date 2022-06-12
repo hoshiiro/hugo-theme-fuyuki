@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .fuyu-content p {
-    @apply font-display text-justify font-display text-gray-600 dark:text-gray-100;
-}
-
-.fuyu-content p b {
-    @apply tracking-widest;
+    @apply my-5 leading-relaxed text-sm font-display text-justify font-display text-gray-600 dark:text-gray-100;
 }
 
 .fuyu-content h1, h2, h3, h4, h5, h6 {
@@ -38,10 +34,6 @@
     @apply text-xs;
 }
 
-.fuyu-content p {
-    @apply my-5 leading-relaxed text-sm;
-}
-
 blockquote {
     @apply text-gray-500 text-sm border-l-2 border-nord8 px-5 italic;
 }
@@ -50,7 +42,7 @@ blockquote {
 
 /* Background */ .bg { color: #d8dee9; }
 /* PreWrapper */ .chroma { 
-    @apply text-gray-50 bg-nord0 dark:bg-nord1 p-3 rounded-md text-xs font-mono;
+    @apply text-gray-50 bg-nord0 dark:bg-nord1 p-7 rounded-md text-xs font-mono;
 }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #bf616a }
