@@ -4,7 +4,7 @@
   "description": "",
   "main": "None",
   "scripts": {
-    "testweb": "hugo serve -D --config exampleSite/config.yaml --themesDir . --watch",
+    "testweb": "hugo serve -D --config exampleSite/config.yaml --themesDir . --contentDir ./exampleSite/content/ --watch",
     "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --watch",
     "buildlocal": "rm -rf public && hugo -D --minify --config exampleSite/config.yaml --themesDir ."
   },

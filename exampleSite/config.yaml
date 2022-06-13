@@ -2,10 +2,10 @@ baseURL: "https://ichigo-miruku.web.app"
 title: "Fuyuki【冬木】"
 
 # !!! SPECIAL ONLY FOR THIS SITE !!!
-contentDir: "exampleSite/content/" 
+contentDir: "./content" 
 
 hasCJKLanguage: true
-
+paginate: 9
 markup:
   tableOfContents:
     startLevel: 1
@@ -31,16 +31,20 @@ menu:
       name: "Home"
       url: /
       weight: 1
-    
-    - identifier: categories
-      name: "Categories"
-      url: /categories/
+    - identifier: pages
+      name: pages
+      url: /pages/
       weight: 2
+    
+    - identifier: stats
+      name: "Stats"
+      url: /stats/
+      weight: 3
     
     - identifier: about
       name: "About"
       url: /about/
-      weight: 3
+      weight: 4
   
   social:
     - identifier: twitter

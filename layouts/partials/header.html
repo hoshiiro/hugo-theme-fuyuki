@@ -57,13 +57,13 @@
 	</section>
     {{ end }}
     </section>
-    <section class="grid grid-cols-2 text-gray-500 dark:text-gray-100">
+    <section class="flex text-gray-500 dark:text-gray-100">
         <section class="space-x-5">
         {{ range site.Menus.main }}
             <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
-        <section class="flex my-auto space-x-5 justify-end">
+        <section class="flex ml-auto my-auto space-x-5 justify-end">
         {{ range site.Menus.social }}
             <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}

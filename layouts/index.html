@@ -1,10 +1,33 @@
 {{ define "main" }}
-    <section class="grid grid-rows-1 space-y-7 md:space-y-0 md:grid-cols-2 md:space-x-5">
-        {{ range last 5 site.RegularPages }}
-            <a href="{{ .Permalink }}" class="flex-row space-y-2">
-                <p class="font-display text-sm text-semibold text-nord7">{{ .Date.Format "Monday, 02 Jan 2006" }}</p>
-                <section class="font-display text-xs text-bold text-gray-500 dark:text-gray-100 text-justify">{{ .Summary }}</section>
+    <section class="grid grid-rows-1 space-y-10 md:space-y-0 md:grid-cols-2 md:gap-7">
+        {{ $paginator := .Paginate site.RegularPages }}
+        {{ range .Paginator.Pages }}
+            <a href="{{ .Permalink }}" class="flex-row space-y-2 hover:text-nord7">
+                <p class="font-display text-xs text-semibold text-gray-400">{{ .Date.Format "Monday, 02 Jan 2006" }}</p>
+                <section class="font-display text-sm md:text-xs text-bold text-gray-500 dark:text-gray-100 text-justify">{{ .Summary }}</section>
             </a>
         {{ end }}
     </section>
+        <section class="flex mt-7">
+            {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}" class="flex mr-auto text-gray-600 font-display">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left my-auto pt-1 mr-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <desc>Download more icon variants from https://tabler-icons.io/i/chevron-left</desc>
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <polyline points="15 6 9 12 15 18"></polyline>
+</svg>
+                    Previous Pages
+                </a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+                <a href="{{ .Paginator.Next.URL }}" class="flex ml-auto text-gray-600 font-display">
+                    Next Pages
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right my-auto pt-1 ml-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <desc>Download more icon variants from https://tabler-icons.io/i/chevron-right</desc>
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <polyline points="9 6 15 12 9 18"></polyline>
+</svg>
+                </a>
+            {{ end }}
+        </section>
 {{ end }}
