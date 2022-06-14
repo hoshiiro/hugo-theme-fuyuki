@@ -37,9 +37,6 @@
         {{ end }}
         {{ end }}
         {{ .Content }}
-        {{ with .Params.music }}
-            {{ $apurl := getJSON "https://open.spotify.com/oembed?url=" .url }}
-            {{ $apurl.html | safeHTML }}
-        {{ end }}
     </article>
+    <script>hljs.highlightAll();</script>
 {{ end }}

@@ -13,7 +13,7 @@ markup:
     endLevel: 6
   highlight:
     anchorLineNos: true
-    codeFences: true
+    codeFences: false
     guessSyntax: true
     hl_Lines: "|"
     lineAnchors: "|"
@@ -54,6 +54,13 @@ menu:
 
 params:
   useDarkModeToggler: yes
+  
+  hljs:
+    version: 11.5.1
+    languages:
+      - python
+      - go
+      - html
   
   author:
     name: "Hoshikawa Shiro"

@@ -35,16 +35,3 @@ Things between header.
 
 ### Code highlight
 Chromastyles with nord theme.
-```python
-class me:
-  def go_say(message):
-    print(text)
-
-# best waif
-cunny = "Perseus"
-
-if cunny == "Perseus":
-  me.go_say("UWOOOOGGGHHH") # always happen
-else:
-  me.go_say("hmm") # another cunnies? SUS
-```

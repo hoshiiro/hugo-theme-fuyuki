@@ -1,0 +1,9 @@
+<section class="py-2 px-3 bg-nord3 text-sm rounded-t-lg flex">
+    <section class="flex space-x-2 my-auto">
+        <div style="width: 20px; height: 8px;" class="rounded-full bg-nord11"></div>
+        <div style="width: 20px; height: 8px;" class="rounded-full bg-nord13"></div>
+        <div style="width: 20px; height: 8px;" class="rounded-full bg-nord14"></div>
+    </section>
+    <div class="font-display text-xs text-nord6 ml-auto capitalize">{{ .Get 0 }}</div>
+</section>
+<pre><code class="languages-{{ .Get 0 }}">{{ .Inner }}</code></pre>
