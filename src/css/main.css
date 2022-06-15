@@ -43,5 +43,9 @@ blockquote {
 }
 
 .hljs {
-    @apply h-min border-2 border-nord3 text-sm px-7 pb-7 pt-0 m-0 rounded-b-lg !important;
+    @apply h-min border-2 border-nord3 text-sm px-7 pb-7 pt-0 m-0 !important;
+}
+
+.hljs-fancy {
+    @apply h-min border-2 border-nord3 text-sm px-7 pb-7 pt-0 m-0 !important;
 }

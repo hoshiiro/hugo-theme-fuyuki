@@ -60,7 +60,6 @@ params:
     languages:
       - python
       - go
-      - html
   
   author:
     name: "Hoshikawa Shiro"

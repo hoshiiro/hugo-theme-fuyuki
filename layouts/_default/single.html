@@ -38,4 +38,11 @@
         {{ end }}
         {{ .Content }}
     </article>
+    {{ if .Params.hljs }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/highlight.min.js"></script>
+    {{ range .Params.hljs.lang }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/languages/{{.}}.min.js"></script>
+    {{ end }}
+    <script>hljs.highlightAll();</script>
+    {{ end }}
 {{ end }}
