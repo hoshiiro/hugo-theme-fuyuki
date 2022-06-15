@@ -1,4 +1,3 @@
----
-type: index
-layout: index
----
++++
+author = "Hugo Authors"
++++

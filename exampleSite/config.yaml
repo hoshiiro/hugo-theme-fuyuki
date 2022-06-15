@@ -1,8 +1,9 @@
 baseURL: "https://ichigo-miruku.web.app"
 title: "Fuyuki【冬木】"
 
-# !!! SPECIAL ONLY FOR THIS SITE !!!
-contentDir: "./content" 
+defaultContentLanguage: id
+ignoreErrors: 
+  - "error-remote-getjson"
 
 hasCJKLanguage: true
 paginate: 9

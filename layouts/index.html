@@ -6,7 +6,7 @@
         {{ range .Paginator.Pages }}
         {{ if (ne .Type "page") }}
             <a href="{{ .Permalink }}" class="flex-row space-y-2 hover:text-nord7">
-                <p class="font-display text-xs text-semibold text-gray-400">{{ .Date.Format "Monday, 02 Jan 2006" }}</p>
+                <p class="font-display text-xs text-semibold text-gray-400">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }}</p>
                 <section class="font-display text-sm md:text-xs text-bold text-gray-500 dark:text-gray-100 text-justify">{{ .Summary }}</section>
             </a>
         {{ else }}
