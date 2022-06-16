@@ -1,20 +1,21 @@
 {{ define "main" }}
-    <article class="fuyu-content flex-row mt-0">
+<section class="grid grid-rows-1 md:mt-10">
+    <article class="flex-row mt-0">
         {{ if (ne .Type "page" ) }}
         <section>
             <!--div class="font-title text-gray-500 dark:text-nord7 font-bold text-2xl">{{ .Title }}</div-->
-            <section class="flex space-x-2">
-                <img class="rounded-sm" height="25px" width="25px" src="{{ site.Params.author.icon }}"/>
-                <div class="font-display text-gray-600 dark:text-gray-100 font-medium text-xs my-auto">Written by <span class="font-bold text-nord7">{{ site.Params.author.name }}</span></div>
+            <section class="flex space-x-2 md:space-x-3">
+                <img class="rounded-md md:rounded-lg w-[25px] h-[25px] md:w-[35px] md:h-[35px]" src="{{ site.Params.author.icon }}"/>
+                <div class="font-display text-gray-600 dark:text-gray-100 font-medium text-sm my-auto">Written by <span class="font-bold text-nord7">{{ site.Params.author.name }}</span></div>
             </section>
         </section>
         <section class="flex mt-5 mb-7">
-            <section class="text-gray-500 mt-2 mr-auto dark:text-gray-50 font-display text-[11px] font-bold">
+            <section class="text-gray-500 mt-2 mr-auto dark:text-gray-50 font-display text-sm md:text-base font-bold">
                 {{ .Date.Format "Monday, 02 Jan 2006." }}
             </section>
             <section class="space-x-2">
             {{ range .Params.tags }}
-                <a href="/tags/{{. | lower}}" class="bg-nord7 dark:bg-nord3 text-gray-100 rounded-md text-[10px] my-auto px-3 py-1 font-title font-bold">{{.}}</a>
+                <a href="/tags/{{. | lower}}" class="bg-nord7 dark:bg-nord3 text-gray-100 rounded-md text-xs md:text-sm md:font-bold my-auto px-3 py-1 font-title font-bold">{{.}}</a>
             {{end}}
             </section>
         </section>
@@ -36,13 +37,13 @@
         </section>
         {{ end }}
         {{ end }}
-        {{ .Content }}
+	    <section class="prose max-w-full md:prose-lg lg:prose-xl prose-neutral prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-headings:text-nord3 dark:prose-headings:text-nord7 prose-p:text-justify prose-pre:p-0 prose-pre:rounded-lg prose-code:text-nord8">
+		    {{ .Content }}
+	    </section>
     </article>
-    {{ if .Params.hljs }}
+</section>
+    {{ if .Params.code }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/highlight.min.js"></script>
-    {{ range .Params.hljs.lang }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/languages/{{.}}.min.js"></script>
-    {{ end }}
     <script>hljs.highlightAll();</script>
     {{ end }}
 {{ end }}

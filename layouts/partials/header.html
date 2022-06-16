@@ -8,8 +8,8 @@
                 </section>
                 {{ end }}
                 <section class="grid {{ with site.Params.description }}grid-row-2{{ end }} my-auto">
-                    <div class="font-title text-sm font-extrabold text-gray-600 dark:text-gray-50 tracking-wide">{{ site.Title }}</div>
-                    {{ with site.Params.brand.description }}<div class="font-display text-xs font-normal text-gray-500 dark:text-gray-100 tracking-wide">{{ site.Params.brand.description }}</div>{{ end }}
+                    <div class="font-title text-normal font-extrabold text-gray-600 dark:text-gray-50 tracking-wide">{{ site.Title }}</div>
+                    {{ with site.Params.brand.description }}<div class="font-display text-sm font-normal text-gray-500 dark:text-gray-100 tracking-wide">{{ site.Params.brand.description }}</div>{{ end }}
                 </section>
                 </a>
             </section>
@@ -58,14 +58,14 @@
     {{ end }}
     </section>
     <section class="flex text-gray-500 dark:text-gray-100">
-        <section class="space-x-5">
+        <section class="space-x-3">
         {{ range site.Menus.main }}
-            <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-sm font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
-        <section class="flex ml-auto my-auto space-x-5 justify-end">
+        <section class="flex ml-auto my-auto space-x-3 justify-end">
         {{ range site.Menus.social }}
-            <a class="font-display text-xs font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="font-display text-sm font-medium uppercase tracking-widest" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         </section>
     </section>

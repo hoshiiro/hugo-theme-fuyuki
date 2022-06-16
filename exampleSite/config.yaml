@@ -1,4 +1,4 @@
-baseURL: "https://ichigo-miruku.web.app"
+baseURL: "https://localhost:1313"
 title: "Fuyuki【冬木】"
 
 defaultContentLanguage: id
@@ -52,6 +52,11 @@ menu:
       name: "Twitter"
       url: /twitter/
       weight: 1
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 params:
   useDarkModeToggler: yes

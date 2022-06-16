@@ -5,9 +5,9 @@
   "main": "None",
   "scripts": {
     "testweb": "hugo serve -D --config exampleSite/config.yaml --themesDir . --contentDir ./exampleSite/content/ --watch",
-    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --watch",
+    "testcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --config ./tailwind.config.js --watch",
     "buildlocal": "rm -rf public && hugo -D --minify --config exampleSite/config.yaml --themesDir .",
-    "buildcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --minify"
+    "buildcss": "npx tailwindcss -i src/css/main.css -o static/css/fuyuki.css --config ./tailwind.config.js "
   },
   "repository": {
     "type": "git",

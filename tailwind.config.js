@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./layouts/*.html",
-    "./layouts/*/*.html"
+    "./layouts/**/*.html"
   ],
   darkMode: "class",
   theme: {
@@ -13,7 +13,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwind-nord"),
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("tailwind-nord")
   ],
 }
