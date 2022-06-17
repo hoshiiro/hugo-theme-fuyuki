@@ -7,6 +7,15 @@
 @tailwind utilities;
 
 /*
+#TableOfContents li > ul > li { 
+    list-style: none;
+}
+
+#TableOfContents li > ul > li > ul > li {
+    list-style: inside;
+}
+
+
 .fuyu-content p {
     @apply my-5 leading-relaxed text-sm md:text-lg font-display text-justify font-display text-gray-600 dark:text-gray-100;
 }
