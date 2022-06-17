@@ -10,7 +10,7 @@
                     <line x1="17" y1="4" x2="13" y2="20"></line>
                 </svg>
             </section>
-            <p class="font-title text-base font-semibold text-gray-500 dark:text-gray-50 my-auto">{{ .Title }} <section class="bg-gray-200 text-gray-500 py-1 px-2 rounded-md text-sm my-auto">{{ len .Pages }}</section></p>
+            <p class="font-title text-base font-semibold text-gray-500 dark:text-gray-50 my-auto">{{ .Page.Title }} <section class="bg-gray-200 text-gray-500 py-1 px-2 rounded-md text-sm my-auto">{{ len .Pages }}</section></p>
         </section>
         <section class="grid grid-rows-1 md:grid-cols-2 space-y-3 md:space-y-0 md:space-x-5">
             {{ range .Data.Pages }}

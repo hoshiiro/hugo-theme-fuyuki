@@ -6,6 +6,8 @@
 @tailwind components;
 @tailwind utilities;
 
+* { margin: 0; padding: 0; }
+
 /*
 #TableOfContents li > ul > li { 
     list-style: none;
@@ -62,7 +64,9 @@ mark {
 }
 
 pre {
-    @apply bg-transparent p-0 !important;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .hljs {
