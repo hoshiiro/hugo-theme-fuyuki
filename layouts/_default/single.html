@@ -26,13 +26,11 @@
         </details>
         {{ end }}
         {{ end }}
-	    <section class="flex flex-col max-w-prose prose max-w-none md:prose-lg lg:prose-xl prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-headings:text-nord3 dark:prose-headings:text-nord7 prose-p:text-justify prose-pre:p-0 prose-a:text-nord10 prose-li:text-nord3">
+	    <section class="grid grid-rows-1 max-w-prose prose max-w-none md:prose-lg lg:prose-xl prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-headings:text-nord3 dark:prose-headings:text-nord7 prose-p:text-justify prose-pre:overflow-auto prose-pre:relative prose-pre:p-0 prose-pre:m-0 prose-a:text-nord10 prose-li:text-nord3">
 		    {{ .Content }}
 	    </section>
     </article>
-</section>
-    {{ if .Params.code }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    {{ end }}
+</section>
 {{ end }}

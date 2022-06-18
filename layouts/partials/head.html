@@ -3,12 +3,10 @@
 {{ else }}
 <title>{{ site.Title }} - {{ .Title }}</title>
 {{ end }}
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device_width, initial-scale=1, shrink-to-fit=1">
 <meta name="description" content="{{ site.Params.brand.description }}">
 <link rel="stylesheet" href='{{ "css/fuyuki.css" | absURL }}'>
-{{ if .Params.code }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/styles/nord.min.css">
-{{ end }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/nord.min.css">
 <script>
     function themeToggle() {
 		const root = document.documentElement

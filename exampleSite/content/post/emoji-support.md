@@ -6,7 +6,7 @@ description = "Guide to emoji usage in Hugo"
 tags = [
     "emoji",
 ]
-code = true
+code = false
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways. 
@@ -24,8 +24,8 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
 
 **N.B.** The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.
 
-{{< highlight css >}}
+```
 .emoji {
   font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 }
-{{< /highlight >}}
+```

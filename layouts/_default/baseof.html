@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="" lang="id">
     {{- partial "head.html" . -}}
-    <body onload="loadTheme()" class="bg-neutral-100 dark:bg-neutral-800 m-10 space-y-7 md:space-y-0 md:mx-32">
+    <body onload="loadTheme()" class="flex-col bg-neutral-100 dark:bg-neutral-800 m-10 space-y-7 md:space-y-0 md:mx-32">
         {{- partial "header.html" . -}}
-        <section class="my-10">
+        <section class="flex-col my-10">
             {{- block "main" . }}{{- end }}
         </section> 
     </body>
