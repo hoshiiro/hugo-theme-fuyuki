@@ -1,0 +1,4 @@
+{{ $pg := .Get 0 }}
+{{ with site.GetPage $pg }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ end }}
