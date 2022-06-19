@@ -6,7 +6,7 @@ ignoreErrors:
   - "error-remote-getjson"
 
 hasCJKLanguage: true
-paginate: 9
+paginate: 16
 markup:
   tableOfContents:
     startLevel: 1
@@ -53,7 +53,7 @@ markup:
 
 params:
   useDarkModeToggler: yes
-  showTitleOnIndex: true
+  showTitleOnIndex: no
   
   hljs:
     version: 11.5.1

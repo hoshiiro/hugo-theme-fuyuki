@@ -1,11 +1,11 @@
 {{ define "main" }}
 <section class="grid grid-rows-1 mb-10">
     <article class="flex-row mt-0">
-        {{ if (ne .Type "page" ) }}
 	    <section class="grid grid-rows-1 max-w-prose prose max-w-none md:prose-lg lg:prose-xl prose-p:font-display prose-headings:font-title prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-headings:text-nord3 dark:prose-headings:text-nord7 prose-p:text-justify prose-pre:overflow-auto prose-pre:relative prose-pre:p-0 prose-pre:m-0 prose-a:text-nord10 prose-li:text-nord3">
+            <p class="font-display text-sm text-semibold text-gray-300 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }}</p>
+            <h1>{{ .Title }}</h1>
 	        {{ .Content }}
 	    </section>
-	    {{ end }}
     </article>
     {{ if .Params.code }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
