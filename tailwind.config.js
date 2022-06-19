@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
         fontFamily: {
-            'title': ["Raleway"],
+            'title': ["Tinos"],
             'display': ["Lato"]
         }
     },

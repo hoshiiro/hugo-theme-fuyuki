@@ -64,8 +64,6 @@ params:
   author:
     name: "Hoshikawa Shiro"
     icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
-    biot: "\"Bahkan jika seluruh dunia membenciku, aku akan tetap bisa hidup selama orang itu masih membutuhkanku.\"<b>— Azusagawa Sakuta</b>"
-  
   brand:
     # Insert icon url (local image/gravatar)
     #icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
