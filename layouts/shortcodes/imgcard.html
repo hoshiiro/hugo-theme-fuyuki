@@ -1,8 +1,8 @@
-<figure class="my-5">
+<section class="h-min">
     <a {{ with .Get "link" }} href="{{.}}" {{ end }}>
-        <img {{ with .Get "ph" }} style="height: {{.}}" {{ end }} class="object-cover w-full rounded-t-md" {{ with .Get "src" }} src="{{.}}" {{ end }} />
+        <img {{ with .Get "ph" }} style="height: {{.}}" {{ end }} class="object-cover w-full rounded-t-md pb-0 mb-0 md:mb-0" {{ with .Get "src" }} src="{{.}}" {{ end }} />
     </a>
-    <figcaption class="flex rounded-b-md bg-gray-50 dark:bg-nord1 text-gray-500 dark:text-gray-100 text-sm py-2 px-4">
+    <section class="flex p-0 m-0 rounded-b-md bg-gray-50 dark:bg-nord1 text-gray-500 dark:text-gray-100 text-sm py-2 px-4">
         <section>
         {{ with .Get "caption" }}
             {{ . }}
@@ -17,5 +17,5 @@
                 <polyline points="15 4 20 4 20 9"></polyline>
             </svg></a>
         </section>
-    </figcaption>
-</figure>
+    </section>
+</section>

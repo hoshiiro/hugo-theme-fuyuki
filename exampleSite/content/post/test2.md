@@ -2,18 +2,24 @@
 title: "Test2"
 date: 2022-06-13T03:55:30Z
 draft: false
-hljs:
-  lang:
-    - python
+code: true
 ---
 > ngihhhhhhhhhh \
-> - *ngih*
+<cite>— *ngih*</cite>
+
 <!--more-->
-{{< imgcard caption="Warusupaito" ph="150px" src="https://cdn.jsdelivr.net/npm/canaiira-assets/img/warspite.webp" >}}
+
+## Image
+
+{{< highlight go >}}
+{{ imgcard caption="<caption>" ph="<image height>(px,em)" src="<image url>" }}
+{{< /highlight >}}
+
+{{< imgcard caption="Warusupaito" ph="175px" src="https://cdn.jsdelivr.net/npm/canaiira-assets/img/warspite.webp" >}}
 
 This posts is for Shortcodes test
 
-{{< hljs python >}}
+{{< highlight python >}}
 class me:
 
   def go_say(message):
@@ -26,7 +32,7 @@ if cunny == "Perseus":
   me.go_say("UWOOOOGGGHHH") # always happen
 else:
   me.go_say("hmm") # another cunnies? SUS
-{{< /hljs >}}
+{{< /highlight >}}
 
 My favorite song:
 
