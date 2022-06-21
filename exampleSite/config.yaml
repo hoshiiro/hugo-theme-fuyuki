@@ -51,6 +51,9 @@ markup:
     renderer:
       unsafe: true
 
+taxonomies:
+  series: series
+
 params:
   useDarkModeToggler: yes
   showTitleOnIndex: no

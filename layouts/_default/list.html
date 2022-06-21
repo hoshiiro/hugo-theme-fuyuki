@@ -1,22 +1,24 @@
 {{ define "main" }}
-    <section class="flex grid grid-rows-1 space-y-5 my-10">
+    <section class="flex grid grid-rows-1 space-y-7">
         <section class="flex space-x-3">
-            <section class="p-2 rounded-md bg-gray-50 dark:bg-nord2 text-gray-500 dark:text-gray-50 my-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1="5" y1="9" x2="19" y2="9"></line>
-                    <line x1="5" y1="15" x2="19" y2="15"></line>
-                    <line x1="11" y1="4" x2="7" y2="20"></line>
-                    <line x1="17" y1="4" x2="13" y2="20"></line>
-                </svg>
-            </section>
-            <p class="font-title text-base font-semibold text-gray-500 dark:text-gray-50 my-auto">{{ .Page.Title }} <section class="bg-gray-200 text-gray-500 py-1 px-2 rounded-md text-sm my-auto">{{ len .Pages }}</section></p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash text-gray-500 dark:text-gray-50" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="5" y1="9" x2="19" y2="9"></line>
+                <line x1="5" y1="15" x2="19" y2="15"></line>
+                <line x1="11" y1="4" x2="7" y2="20"></line>
+                <line x1="17" y1="4" x2="13" y2="20"></line>
+            </svg>
+            <h2 class="my-auto font-display tracking-widest text-[23px] md:text-[30px] font-semibold text-gray-500 dark:text-gray-50 my-auto">{{ .Page.Title }}</h2>
         </section>
-        <section class="grid grid-rows-1 md:grid-cols-2 space-y-3 md:space-y-0 md:space-x-5">
+        <section class="grid grid-rows-1 md:grid-cols-2 space-y-3 md:space-y-0 md:gap-5 pl-3">
             {{ range .Data.Pages }}
-                <a href="{{ .Permalink }}" class="flex-row space-y-2 bg-gray-50 dark:bg-nord1 py-2 px-3 rounded-md">
-                    <section class="text-gray-600 font-display font-medium my-auto">{{ .Title }}</section>
+                <a href="{{ .Permalink }}" class="flex-row space-y-2">
+                    <section class="text-gray-600 dark:text-gray-100 font-display font-medium my-auto">&sdot; {{ .Title }}</section>
+                    {{ if .Summary }}
                     <section class="text-gray-500 font-display text-justify text-sm">{{ .Summary }}</section>
+                    {{ else }}
+                    <section class="text-gray-500 font-display text-justify text-sm"><span class="invisible">&sdot;</span> {{ .Pages | len }} Posts</section>
+                    {{ end }}
                 </a>
             {{ end }}
         </section>

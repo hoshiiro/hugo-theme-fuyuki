@@ -6,7 +6,7 @@ image:
   desc: "okay"
 draft: false
 tags: ["Dev", "Hugo"]
-categories: "Fuyuki Development Log"
+series: "Fuyuki Development Log"
 pinned: true
 ---
 

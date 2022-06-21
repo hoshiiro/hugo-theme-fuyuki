@@ -13,7 +13,7 @@ categories = [
     "syntax",
 ]
 code = true
-series = ["Themes Guide"]
+series = "Themes Guide"
 aliases = ["migrate-from-jekyl"]
 +++
 

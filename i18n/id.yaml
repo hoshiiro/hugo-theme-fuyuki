@@ -17,6 +17,9 @@ Friday:
 
 Saturday:
   other: Sabtu
+  
+Sunday:
+  other: Minggu
 
 # Month translation  
 Jan:
@@ -41,7 +44,7 @@ Jul:
   other: Jul
   
 Aug:
-  other: Ags
+  other: Agu
   
 Sep:
   other: Sep

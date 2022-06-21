@@ -970,6 +970,10 @@ video {
   margin-bottom: 0;
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .m-10{
   margin: 2.5rem;
 }
@@ -1027,6 +1031,18 @@ video {
 
 .mb-0{
   margin-bottom: 0px;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
 }
 
 .block{
@@ -1131,6 +1147,12 @@ video {
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .rounded-md{
   border-radius: 0.375rem;
 }
@@ -1221,6 +1243,18 @@ video {
   padding-bottom: 0px;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1257,6 +1291,31 @@ video {
   line-height: 1rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-\[50px\]{
+  font-size: 50px;
+}
+
+.text-\[30px\]{
+  font-size: 30px;
+}
+
+.text-\[25px\]{
+  font-size: 25px;
+}
+
+.text-\[20px\]{
+  font-size: 20px;
+}
+
+.text-\[23px\]{
+  font-size: 23px;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -1271,6 +1330,10 @@ video {
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
 
 .italic{
@@ -1560,6 +1623,11 @@ h2{
   color: rgb(249 250 251 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .dark .dark\:prose-headings\:text-nord7 :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))){
   --tw-text-opacity: 1;
   color: rgb(143 188 187 / var(--tw-text-opacity));
@@ -1833,6 +1901,10 @@ h2{
     gap: 1.75rem;
   }
 
+  .md\:gap-5{
+    gap: 1.25rem;
+  }
+
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -1848,6 +1920,10 @@ h2{
   .md\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .md\:text-\[30px\]{
+    font-size: 30px;
   }
 }
 
