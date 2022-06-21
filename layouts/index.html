@@ -6,11 +6,14 @@
     <section class="grid grid-rows-1 gap-y-10 md:space-y-0 md:grid-cols-2 md:gap-7">
         {{ range .Paginator.Pages }}
         {{ if (ne .Type "page") }}
+            {{ if in site.Params.hiddenSection .Type }}
+            {{ else }}
             <a href="{{ .Permalink }}" class="flex-row space-y-2 hover:text-nord7">
                 <p class="font-display text-sm text-semibold text-gray-400 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }}</p>
                 {{ if site.Params.showTitleOnIndex }}<h2 class="text-lg font-bold font-display text-gray-600 dark:text-nord7">{{ .Title }}</h2>{{ end }}
                 <section class="font-display text-normal md:text-xs text-bold text-gray-500 dark:text-nord6 text-justify">{{ .Summary }}</section>
             </a>
+            {{ end }}
         {{ else }}
         {{ end }}
         {{ end }}

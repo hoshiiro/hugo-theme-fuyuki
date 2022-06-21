@@ -55,6 +55,9 @@ params:
   useDarkModeToggler: yes
   showTitleOnIndex: no
   
+  hiddenSection:
+    - posts
+  
   hljs:
     version: 11.5.1
     languages:
