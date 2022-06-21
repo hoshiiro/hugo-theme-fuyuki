@@ -1,10 +1,15 @@
 {{ define "main" }}
 <section>
-    {{ if .Params.image }}<img class="h-[175px] rounded-md w-full object-cover mb-10" src="{{ .Params.image }}"/>{{ end }}
     <article class="mt-0">
 	    <section class="prose max-w-md md:max-w-prose md:prose-lg lg:prose-xl prose-p:font-display prose-headings:font-title prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-headings:text-nord3 dark:prose-headings:text-nord7 prose-p:text-justify prose-pre:overflow-auto prose-pre:relative prose-pre:p-0 prose-pre:m-0 prose-a:text-nord10 prose-li:text-nord3 dark:prose-li:text-nord6">
-            <p class="font-display text-sm text-semibold text-gray-300 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }}</p>
+            {{ if (ne .Type "page") }}<p class="not-prose font-display text-sm text-semibold text-gray-300 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }} &sdot; <a href='{{ "about" | absURL }}' class="not-prose text-nord7">{{ site.Params.author.name }}</a></p>{{ end }}
             <h1>{{ .Title }}</h1>
+            {{ with .Params.image }}
+            <section class="not-prose space-y-4">
+                <img class="h-[175px] rounded-md w-full object-cover" src="{{ .url }}"/>
+                <div class="text-display text-sm md:text-normal italic text-center">{{ .desc }}</div>
+            </section>
+            {{ end }}
 	        {{ .Content }}
 	    </section>
     </article>
