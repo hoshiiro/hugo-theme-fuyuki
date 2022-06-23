@@ -15,7 +15,7 @@
                 <a href="{{ .Permalink }}" class="flex-row space-y-2">
                     <section class="text-gray-600 dark:text-gray-100 font-display font-medium my-auto">&sdot; {{ .Title }}</section>
                     {{ if .Summary }}
-                    <section class="text-gray-500 font-display text-justify text-sm">{{ .Summary }}</section>
+                    <section class="text-gray-500 dark:text-gray-200 font-display text-justify text-sm">{{ .Summary }}</section>
                     {{ else }}
                     <section class="text-gray-500 font-display text-justify text-sm"><span class="invisible">&sdot;</span> {{ .Pages | len }} Posts</section>
                     {{ end }}

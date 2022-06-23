@@ -56,7 +56,7 @@ taxonomies:
 
 params:
   useDarkModeToggler: yes
-  showTitleOnIndex: no
+  showTitleOnIndex: yes
   
   hiddenSection:
     - posts
