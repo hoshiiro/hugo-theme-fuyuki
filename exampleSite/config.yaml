@@ -55,6 +55,9 @@ taxonomies:
   series: series
 
 params:
+
+  accentColor: "#876859"
+
   useDarkModeToggler: yes
   showTitleOnIndex: yes
   

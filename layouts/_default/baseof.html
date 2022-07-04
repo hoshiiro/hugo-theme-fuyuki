@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="" lang="id">
     {{- partial "head.html" . -}}
-    <body onload="loadTheme()" class="flex-col bg-nord5 dark:bg-nord0 m-10 space-y-7 md:mx-32 flex md:my-32">
+    <body onload="loadTheme()" class="flex-col bg-nord5 dark:bg-neutral-800 m-10 space-y-7 md:mx-32 flex md:my-32">
         {{ if or .Params.math .Site.Params.math }}
             {{ partial "math.html" . }}
         {{ end }}

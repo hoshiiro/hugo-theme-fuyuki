@@ -40,3 +40,14 @@
 		}
 	}
 </script>
+<style>
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose a {
+        color: {{ site.Params.accentColor }};
+    }
+    mark {
+        background-color: {{ site.Params.accentColor}};
+    }
+    kbd {
+        border-color: {{ site.Params.accentColor }} !important;
+    }
+</style>
