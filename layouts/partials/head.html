@@ -1,5 +1,5 @@
 {{ if .IsHome }}
-<title>{{ site.Title }} | Page {{ .Paginator.PageNumber }}</title>
+<title>{{ site.Title }}{{ if (eq .Paginator.PageNumber "1") }}{{ else }}{{ end }} | Page {{ .Paginator.PageNumber }}</title>
 {{ else }}
 <title>{{ site.Title }} - {{ .Title }}</title>
 {{ end }}
@@ -7,7 +7,7 @@
 <meta name="description" content="{{ site.Params.brand.description }}">
 <link rel="stylesheet" href='{{ "css/fuyuki.css" | absURL }}'>
 {{ if .Params.code }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/nord.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ site.Params.hljs.version }}/styles/{{ site.Params.hljs.theme }}.min.css">
 {{ end }}
 <script>
     function themeToggle() {
@@ -40,14 +40,3 @@
 		}
 	}
 </script>
-<style>
-    .prose h1, .prose h2, .prose h3, .prose h4, .prose a {
-        color: {{ site.Params.accentColor }};
-    }
-    mark {
-        background-color: {{ site.Params.accentColor}};
-    }
-    kbd {
-        border-color: {{ site.Params.accentColor }} !important;
-    }
-</style>

@@ -7,9 +7,9 @@
   <span class="hidden mx-3 md:block">|</span>
       <section>
           Theme
-          <a style="color: {{ site.Params.accentColor }};" target="_blank" href="https://github.com/hoshiiro/hugo-theme-fuyuki">Fuyuki</a>
+          <a {{ if site.Params.accentColor }}style="color: {{ site.Params.accentColor }};"{{ else }}class="text-nord7"{{ end }} target="_blank" href="https://github.com/hoshiiro/hugo-theme-fuyuki">Fuyuki</a>
           by
-          <a style="color: {{ site.Params.accentColor }};" target="_blank" href="https://github.com/hoshiiro/">Fikri</a>
+          <a {{ if site.Params.accentColor }}style="color: {{ site.Params.accentColor }};"{{ else }}class="text-nord7"{{ end }} target="_blank" href="https://github.com/hoshiiro/">Fikri</a>
         </section>
   </section>
   <!--section class="flex">

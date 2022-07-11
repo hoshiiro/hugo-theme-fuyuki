@@ -1,4 +1,4 @@
-baseURL: "https://fuyuki.pages.dev"
+baseURL: "https://localhost:1313"
 title: "Fuyuki【冬木】"
 
 defaultContentLanguage: id
@@ -6,7 +6,7 @@ ignoreErrors:
   - "error-remote-getjson"
 
 hasCJKLanguage: true
-paginate: 16
+paginate: 5
 markup:
   tableOfContents:
     startLevel: 1
@@ -21,26 +21,11 @@ menu:
       name: "Home"
       url: /
       weight: 1
-    - identifier: pages
-      name: pages
-      url: /pages/
-      weight: 2
-    
-    - identifier: stats
-      name: "Stats"
-      url: /stats/
-      weight: 3
     
     - identifier: about
       name: "About"
       url: /about/
-      weight: 4
-  
-  social:
-    - identifier: twitter
-      name: "Twitter"
-      url: /twitter/
-      weight: 1
+      weight: 2
 
 markup:
   tableOfContents:
@@ -52,29 +37,21 @@ markup:
       unsafe: true
 
 taxonomies:
-  series: series
+  series: "series"
+  tags: "tags"
 
 params:
-
-  accentColor: "#876859"
 
   useDarkModeToggler: yes
   showTitleOnIndex: yes
   
   hiddenSection:
-    - posts
+    - homepage
   
   hljs:
     version: 11.5.1
-    languages:
-      - python
-      - go
+    theme: nord
   
   author:
     name: "Hoshikawa Shiro"
     icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
-  brand:
-    # Insert icon url (local image/gravatar)
-    #icon: https://s.gravatar.com/avatar/ae7c270bebbeb8c26ba11c27b5296a2f?s=128
-    # Site description
-    description: "A minimalist hugo theme and not lazy designed, i swear!"

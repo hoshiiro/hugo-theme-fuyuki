@@ -5,22 +5,22 @@
     </section>
     <section class="grid grid-rows-1 gap-y-10 md:space-y-0 md:grid-cols-2 md:gap-7">
         {{ range .Paginator.Pages }}
-        {{ if (ne .Type "page") }}
-            {{ if in site.Params.hiddenSection .Type }}
-            {{ else }}
+        {{ if (or (eq .Type "page") (in site.Params.hiddenSection .Section)) }}
+        {{ else }}
+        {{ if (eq .Params.hidden true) }}
+        {{ else }}
             <a href="{{ .Permalink }}" class="flex-row space-y-1">
                 <p class="font-display text-sm text-semibold text-gray-400 dark:text-gray-50">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }}</p>
-                {{ if site.Params.showTitleOnIndex }}<h2 style="color: {{ site.Params.accentColor }};" class="font-title text-lg font-bold font-display">{{ .Title }}</h2>{{ end }}
+                {{ if site.Params.showTitleOnIndex }}<h2 {{ if site.Params.accentColor}}style="color: {{ site.Params.accentColor }};" class="font-title text-lg font-bold font-display" {{ else }} class="text-nord7 font-title text-lg font-bold font-display" {{ end }}>{{ .Title }}</h2>{{ end }}
                 <section class="font-display text-normal md:text-xs text-bold text-gray-500 dark:text-gray-100 text-justify">{{ .Summary }}</section>
             </a>
-            {{ end }}
-        {{ else }}
+        {{ end }}
         {{ end }}
         {{ end }}
     </section>
         <section class="flex mt-10">
             {{ if .Paginator.HasPrev }}
-                <a href="{{ .Paginator.Prev.URL }}" class="flex mr-auto text-gray-600 font-display">
+                <a href="{{ .Paginator.Prev.URL }}" class="flex mr-auto text-nord3 dark:text-nord4 font-display">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left my-auto pt-1 mr-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
    <desc>Download more icon variants from https://tabler-icons.io/i/chevron-left</desc>
    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -30,7 +30,7 @@
                 </a>
             {{ end }}
             {{ if .Paginator.HasNext }}
-                <a href="{{ .Paginator.Next.URL }}" class="flex ml-auto text-gray-600 font-display">
+                <a href="{{ .Paginator.Next.URL }}" class="flex ml-auto text-nord3 dark:text-nord4 font-display">
                     Next Pages
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right my-auto pt-1 ml-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
    <desc>Download more icon variants from https://tabler-icons.io/i/chevron-right</desc>

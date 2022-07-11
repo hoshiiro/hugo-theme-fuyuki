@@ -54,15 +54,15 @@ blockquote {
 */
 
 kbd {
-    @apply bg-gray-100 dark:bg-neutral-800 border-2 text-xs text-gray-500 dark:text-gray-100 py-1 px-3 rounded-md mx-2 !important;
+    @apply bg-transparent border-2 border-nord7 text-xs text-nord3 dark:text-nord4 py-1 px-3 rounded-md mx-2 !important;
 }
 
 mark {
-    @apply text-gray-50 px-1 rounded-md !important;
+    @apply bg-nord7 text-gray-50 px-1 rounded-md !important;
 }
 
 pre {
-    @apply bg-transparent;
+    @apply bg-transparent border-2 border-nord3;
 }
 
 code {
@@ -74,9 +74,17 @@ h2 {
 }
 
 .hljs {
-    @apply border-2 border-nord3 text-sm md:text-base rounded-lg md:-my-5 md:-mx-7 p-5 !important;
+    @apply border-nord3 text-sm md:text-base rounded-lg md:-my-5 md:-mx-7 p-5 !important;
 }
 
-.hljs-fancy {
-    @apply border-2 border-nord3 text-sm px-7 pb-7 pt-0 m-0 !important;
+::-webkit-scrollbar {
+    display: none;
+}
+
+.prose code {
+    @apply text-nord7;
+} 
+
+pre > code {
+    @apply text-nord4 !important;
 }

@@ -1,23 +1,42 @@
 ---
-title: "Test2"
+title: "Shortcodes"
 date: 2022-06-13T03:55:30Z
 draft: false
 code: true
+series: "fuyuki"
+tags: ["hugo"]
+hidden: false
 ---
-> ngihhhhhhhhhh \
-<cite>— *ngih*</cite>
 
+A brief example of my few "custom" shortcodes that i make for this theme.
 <!--more-->
-
 ## Image
 
-{{< highlight go >}}
-{{ imgcard caption="<caption>" ph="<image height>(px,em)" src="<image url>" }}
-{{< /highlight >}}
+```
+{{</* imgcard caption="<caption>" ph="<image height>(px,em)" src="<image url>" */>}}
+```
 
 {{< imgcard caption="Warusupaito" ph="175px" src="https://cdn.jsdelivr.net/npm/canaiira-assets/img/warspite.webp" >}}
 
-This posts is for Shortcodes test
+## Posts referencing / linking
+
+```
+{{</* link file-name */>}}
+```
+
+Example: {{< link about >}}
+
+You have a post with the same file name? No problem.
+
+```
+{{</* link file-name section */>}}
+```
+
+Example: {{< link post about >}} 
+
+Notice that the second link lead you to about page inside the post section rather than the actual about page.
+
+## Codeblock
 
 {{< highlight python >}}
 class me:
@@ -34,14 +53,25 @@ else:
   me.go_say("hmm") # another cunnies? SUS
 {{< /highlight >}}
 
-My favorite song:
+## Spotify:
+
+```
+{{</* spotify url="<normal-share-url>" */>}}
+```
+
+Example with the share url set to: `https://open.spotify.com/track/6115WGUBGHmLl3s22fHDkF?si=hcz15xoGRb6TBUvlk7DUZw&utm_source=copy-link`
 
 {{< spotify url="https://open.spotify.com/track/6115WGUBGHmLl3s22fHDkF?si=hcz15xoGRb6TBUvlk7DUZw&utm_source=copy-link" >}}
 
-Soundcloud: \
-The fact that you can listen to the full song in browser without need to download the app, make soundcloud superior than spotify lmao
+## Soundcloud: 
 
-{{< soundcloud url="https://soundcloud.com/soundpiercer/milightconnect?in_system_playlist=personalized-tracks%3A%3Auser-458638128%3A1161794608&utm_source=mobi&utm_campaign=social_sharing&utm_terms=mobi_google_one_tap.control" >}} 
+```
+{{</* soundcloud url="<track-url>" */>}}
+```
+
+Example with the track url set to: `https://soundcloud.com/ats024/nnrr0012-xfd`
+
+{{< soundcloud url="https://soundcloud.com/ats024/nnrr0012-xfd" >}}
 
 Gist test
 <!--{{< gist hoshiiro 2dce9b5f3276679a07ff267e9b0886af >}}-->

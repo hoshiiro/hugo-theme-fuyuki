@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="" lang="id">
     {{- partial "head.html" . -}}
-    <body onload="loadTheme()" class="flex-col bg-neutral-100 dark:bg-neutral-800 m-10 space-y-7 md:mx-32 flex md:my-32">
+    <body onload="loadTheme()" class="flex-col bg-nord5 dark:bg-nord0 m-10 space-y-7 md:mx-32 flex md:my-32">
         {{ if or .Params.math .Site.Params.math }}
             {{ partial "math.html" . }}
         {{ end }}
-        {{- partial "header.html" . -}}
+        <section class="w-full max-w-prose mx-auto">
+            {{- partial "header.html" . -}}
+        </section>
         <section class="py-7">
             {{- block "main" . }}{{- end }}
         </section> 

@@ -1,14 +1,21 @@
 {{ define "main" }}
-<section>
-    <article>
-	    <section class="prose prose-neutral max-w-md md:max-w-prose md:prose-lg lg:prose-xl prose-p:font-display prose-headings:font-title prose-p:text-nord3 dark:prose-p:text-nord6 dark:prose-invert prose-p:text-justify prose-pre:overflow-auto prose-pre:relative prose-pre:p-0 prose-pre:m-0 prose-li:text-nord3 dark:prose-li:text-nord6">
+<section class="flex justify-center">
+    <article class="prose">
+	    <section class="max-w-md md:max-w-prose prose-blockquote:border-nord7 dark:prose-td:text-nord4 prose-strong:text-nord3 dark:prose-strong:text-nord6 md:prose-lg lg:prose-xl prose-p:font-display prose-headings:font-title prose-p:text-nord3 dark:prose-p:text-nord6 prose-p:text-justify prose-pre:overflow-auto prose-pre:relative prose-pre:p-0 prose-pre:m-0 prose-li:text-nord3 prose-li:marker:text-nord7 dark:prose-li:text-nord6 {{ if site.Params.accentColor }}{{ else }}prose-headings:text-nord7 prose-a:text-nord7{{ end }}">
             {{ if (and (ne .Type "page") (.Params.series) ) }}
                 {{ $ctg := replace .Params.series " " "-" | lower }}
-                <p class="not-prose font-display text-sm text-semibold text-gray-300 dark:text-nord7 capitalize"><a href='{{ print site.BaseURL "series/" $ctg }}'>{{ .Params.series }}</a> &sdot; {{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ end }}</p>
+                <!--p class="not-prose font-display text-sm text-semibold text-gray-300 dark:text-nord7 capitalize"><a {{ if site.Params.accentColor }}{{ else }}class="text-nord7"{{ end }} href='{{ print site.BaseURL "series/" $ctg }}'>{{ .Params.series }}</a> &sdot; 
+                    {{ if .Params.tags }}
+                        {{ range $key, $value := .Params.tags }}
+                            <!--refer to https://discourse.gohugo.io/t/howto-delimiter-separated-tags/146/7>
+                            <a href="/tags/{{ $value | urlize }}">{{ $value }}</a>{{ if ne $key (sub (len $.Params.tags) 1) }}, {{ else }}{{ end }}
+                        {{ end }}
+                    {{ end }}
+                </p-->
             {{ end }}
             <h1 class="m-0">{{ .Title }}</h1>
             {{ if (ne .Type "page") }}
-                <p class="not-prose font-display text-sm text-semibold text-gray-300 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }} &sdot; <a href='{{ "about" | absURL }}' style="color: {{ site.Params.accentColor }};" class="not-prose">{{ with .Params.author }}{{ . }}{{ else }}{{ site.Params.author.name }}{{ end }}</a></p>
+                <p class="not-prose font-display text-sm text-semibold text-gray-300 dark:text-nord7">{{ T ( .Date.Format "Monday") }}, {{ .Date.Day }} {{ T ( .Date.Format "Jan" ) }} {{ .Date.Year }} &sdot; <a href='{{ "about" | absURL }}' {{ if site.Params.accentColor }}style="color: {{ site.Params.accentColor }};"{{ else }} class="text-nord7" {{ end }}>{{ with .Params.author }}{{ . }}{{ else }}{{ site.Params.author.name }}{{ end }}</a></p>
             {{ end }}
             {{ with .Params.image }}
             <section class="not-prose space-y-4 pt-5">
